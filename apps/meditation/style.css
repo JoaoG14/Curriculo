@@ -33,7 +33,7 @@ button {
   cursor: pointer;
 }
 
-#btn-reset, #btn-start, #btn-pause {
+.btn button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -41,11 +41,9 @@ button {
   font-size: 2em;
 }
 
-#btn-reset {
-    font-size: 1.75em;
+#btn-sound-off {
+  margin-right: 4.9px;
 }
-
-
 
 .hide {
   display: none;
