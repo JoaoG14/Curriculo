@@ -1,7 +1,5 @@
 const btnStart = document.getElementById("btn-start");
 const btnPause = document.getElementById("btn-pause");
-const btnSoundOn = document.getElementById("btn-sound-on");
-const btnSoundOff = document.getElementById("btn-sound-off");
 const reset = document.getElementById("btn-reset");
 let minutes = document.getElementById("minute");
 
