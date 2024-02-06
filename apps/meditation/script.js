@@ -2,6 +2,9 @@ const btnStart = document.getElementById("btn-start");
 const btnPause = document.getElementById("btn-pause");
 const reset = document.getElementById("btn-reset");
 let minutes = document.getElementById("minute");
+const btnSoundOn = document.getElementById("btn-sound-on");
+const btnSoundOff = document.getElementById("btn-sound-off");
+const bell = document.getElementById("bell");
 
 let paused = false;
 let holder;
@@ -9,6 +12,10 @@ let resetHolderMin;
 let resetHolderSec;
 let started = false;
 
+btnSoundOn.addEventListener("click", () => {
+  document.getElementById("ambient-sound").pause();
+  document.getElementById("ambient-sound").muted = true;
+})
 
 function rangeSlide(value) {
   if (started) {
@@ -31,7 +38,8 @@ btnStart.addEventListener("click", () => {
     document.getElementById("ambient-sound").play();
     paused = false;
   } else {
-    document.getElementById("bell").play();
+    bell.currentTime = 0;
+    bell.play();
     document.getElementById("ambient-sound").play();
     duration = parseInt(minutes.value) * 60;
   }
@@ -67,7 +75,7 @@ const timer = (duration, display) => {
 
     if (timer < 0) {
       document.getElementById("ambient-sound").pause();
-      document.getElementById("bell").play();
+      bell.play();
       display.innerHTML = "FIM!";
       btnPause.classList.remove("show");
       btnPause.classList.add("hide");
@@ -83,7 +91,8 @@ const timer = (duration, display) => {
       (resetTime = () => {
         holder = timer;
         document.getElementById("ambient-sound").pause();
-        document.getElementById("bell").pause();
+        bell.pause();
+        bell.currentTime = 0;
         clearInterval(interval);
         btnPause.classList.remove("show");
         btnPause.classList.add("hide");
@@ -99,7 +108,7 @@ const timer = (duration, display) => {
       (resetTime = () => {
         clearInterval(interval);
         document.getElementById("ambient-sound").pause();
-        document.getElementById("bell").pause();
+        bell.pause();
         display.innerHTML = `${resetHolderMin}:${resetHolderSec}`;
         btnPause.classList.remove("show");
         btnPause.classList.add("hide");
