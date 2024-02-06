@@ -28,9 +28,11 @@ btnStart.addEventListener("click", () => {
 
   if (paused) {
     duration = holder;
+    document.getElementById("ambient-sound").play();
     paused = false;
   } else {
     document.getElementById("bell").play();
+    document.getElementById("ambient-sound").play();
     duration = parseInt(minutes.value) * 60;
   }
 
@@ -64,6 +66,7 @@ const timer = (duration, display) => {
     timer -= 1;
 
     if (timer < 0) {
+      document.getElementById("ambient-sound").pause();
       document.getElementById("bell").play();
       display.innerHTML = "FIM!";
       btnPause.classList.remove("show");
@@ -79,6 +82,8 @@ const timer = (duration, display) => {
       "click",
       (resetTime = () => {
         holder = timer;
+        document.getElementById("ambient-sound").pause();
+        document.getElementById("bell").pause();
         clearInterval(interval);
         btnPause.classList.remove("show");
         btnPause.classList.add("hide");
@@ -93,6 +98,8 @@ const timer = (duration, display) => {
       "click",
       (resetTime = () => {
         clearInterval(interval);
+        document.getElementById("ambient-sound").pause();
+        document.getElementById("bell").pause();
         display.innerHTML = `${resetHolderMin}:${resetHolderSec}`;
         btnPause.classList.remove("show");
         btnPause.classList.add("hide");
