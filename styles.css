@@ -165,7 +165,6 @@ footer {
   text-align: center;
 }
 
-
 @media (min-width: 700px) {
   :root {
     --bg-url: url(assets/bg-mobile.jpg);
@@ -183,7 +182,6 @@ footer {
   to {
     left: 50%;
   }
-  
 }
 
 @keyframes slide-back {
@@ -193,5 +191,4 @@ footer {
   to {
     left: 0;
   }
-  
 }
