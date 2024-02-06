@@ -13,21 +13,38 @@
   </head>
   <body class="light">
     <div class="container-settings">
-        <p id="focus">Settings</p>
+      <p id="focus">Settings</p>
 
+      <div class="select">
+        <div id="category-select">
+          <label for="options-view-button">Categoria</label>
+          <input type="checkbox" id="options-view-button" />
 
+          <div id="selected-button">
+            <div id="selected-value">Selecione a categoria</div>
 
-        
-
+            <div id="chevrons">
+              <i data-lucide="chevron-down"></i>
+              <i data-lucide="chevron-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <audio src="assets/bells-1-72261.mp3" id="bell"></audio>
-    <audio loop src="assets/ambient-sounds/forest-with-small-river-birds-and-nature-field-recording-6735.mp3" 
-    id="ambient-sound"></audio> 
-    
+    <audio
+      loop
+      src="assets/ambient-sounds/forest-with-small-river-birds-and-nature-field-recording-6735.mp3"
+      id="ambient-sound"
+    ></audio>
 
-    
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </body>
-  
+
   <script src="script.js"></script>
 </html>

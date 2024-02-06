@@ -1,3 +1,5 @@
+lucide.createIcons();
+
 const btnStart = document.getElementById("btn-start");
 const btnPause = document.getElementById("btn-pause");
 const reset = document.getElementById("btn-reset");
