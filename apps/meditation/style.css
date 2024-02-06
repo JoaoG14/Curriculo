@@ -52,7 +52,11 @@ button {
 }
 
 #btn-sound-off {
-  margin-right: 4.9px;
+  margin-right: 4px;
+}
+
+#btn-pause {
+  margin: 0 2px;
 }
 
 .hide {

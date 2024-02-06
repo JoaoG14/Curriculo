@@ -5,6 +5,8 @@ let minutes = document.getElementById("minute");
 const btnSoundOn = document.getElementById("btn-sound-on");
 const btnSoundOff = document.getElementById("btn-sound-off");
 const bell = document.getElementById("bell");
+const ambientSound = document.getElementById("ambient-sound");
+
 
 let paused = false;
 let holder;
@@ -13,8 +15,19 @@ let resetHolderSec;
 let started = false;
 
 btnSoundOn.addEventListener("click", () => {
-  document.getElementById("ambient-sound").pause();
-  document.getElementById("ambient-sound").muted = true;
+  ambientSound.muted = true;
+  btnSoundOn.classList.remove("show");
+  btnSoundOn.classList.add("hide");
+  btnSoundOff.classList.remove("hide");
+  btnSoundOff.classList.add("show");
+})
+
+btnSoundOff.addEventListener("click", ()=> {
+  ambientSound.muted = false;
+  btnSoundOn.classList.remove("hide");
+  btnSoundOn.classList.add("show");
+  btnSoundOff.classList.remove("show");
+  btnSoundOff.classList.add("hide");
 })
 
 function rangeSlide(value) {
