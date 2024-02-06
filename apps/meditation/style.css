@@ -116,7 +116,7 @@ button {
 .range {
   width: 300px;
   height: 15px;
-  -webkit-appearance: none;
+  appearance: none;
   background: var(--slider-background);
   outline: none;
   border-radius: 15px;
