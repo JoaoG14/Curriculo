@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--main-color);
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: grid;
   place-content: center;
   height: 85vh;
@@ -11,11 +11,20 @@ body {
   user-select: none;
 }
 
+:root {
+  --main-color: black;
+  --second-color: white;
+}
+
+.light {
+  --main-color: white;
+  --second-color: black;
+}
 
 label {
   font-size: 30px;
   padding-right: 20px;
-  color: white;
+  color: var(--second-color);
 }
 
 audio {
@@ -28,7 +37,7 @@ input {
 
 button {
   font-size: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--second-color);
   border-radius: 500px;
   padding: 10px 20px;
   border: none;
@@ -36,7 +45,7 @@ button {
 }
 
 #focus {
-  color: white;
+  color: var(--second-color);
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -47,7 +56,7 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: var(--second-color);
   font-size: 2em;
 }
 
@@ -67,7 +76,7 @@ button {
   font-size: 100px;
   font-weight: 700;
   text-align: center;
-  color: white;
+  color: var(--second-color);
 }
 
 .input-container {
@@ -86,11 +95,9 @@ button {
 }
 
 #sliderContainer {
-  
   display: block;
-  
+
   text-align: center;
-  
 }
 #rangeValue {
   position: relative;
@@ -117,7 +124,27 @@ button {
   border-radius: 50%;
   background: #000000;
   cursor: grab;
-  border: 2px solid #ffffff;
-  box-shadow: -407px 0 0 400px #ffffff;
+  border: 2px solid var(--second-color);
+  box-shadow: -407px 0 0 400px var(--second-color);
 }
 
+a:visited {
+  color: var(--second-color);
+}
+
+a:link {
+  color: var(--second-color);
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+a:active {
+  color: var(--second-color);
+}
+
+.container-settings {
+  height: 277px;
+  width: 304px;
+}
