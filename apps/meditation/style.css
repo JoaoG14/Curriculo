@@ -155,3 +155,7 @@ a:active {
   width: 304px;
 }
 
+#theme-container {
+  display: flex;
+  justify-content: space-between;
+}
