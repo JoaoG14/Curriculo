@@ -5,33 +5,51 @@
     <meta name="viewport" content="width=device-width" />
     <title>Meditation</title>
 
+    <link rel="stylesheet" href="settings.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
-  <body class="light">
+  <body class="">
     <div class="container-settings">
-        <p id="focus">Settings</p>
-        
-        <div id="theme-container">
-          <p id="themes">Theme:</p>
-          <input type="text">
+      <p id="focus">Settings</p>
+
+      <div id="theme-container">
+        <p id="themes">Theme:</p>
+        <div class="select-box">
+          <div class="options-container">
+            <div class="option">
+              <input
+                type="radio"
+                class="radio"
+                id="automobiles"
+                name="category"
+              />
+              <label for="automobiles">Dark</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" class="radio" id="film" name="category" />
+              <label for="film">Light</label>
+            </div>
+          </div>
+
+          <div class="selected">Dark</div>
         </div>
-        
+      </div>
 
-        
-
+      <script src="settings.js"></script>
     </div>
 
     <audio src="assets/bells-1-72261.mp3" id="bell"></audio>
-    <audio loop src="assets/ambient-sounds/forest-with-small-river-birds-and-nature-field-recording-6735.mp3" 
-    id="ambient-sound"></audio> 
-    
-
-    
+    <audio
+      loop
+      src="assets/ambient-sounds/forest-with-small-river-birds-and-nature-field-recording-6735.mp3"
+      id="ambient-sound"
+    ></audio>
   </body>
-  
+
   <script src="script.js"></script>
 </html>
