@@ -5,11 +5,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f7f6ff;
-}
-
-h2 {
-  margin: 16px;
+  
 }
 
 #themes {
@@ -29,7 +25,7 @@ h2 {
 }
 
 .select-box .options-container {
-  background: #2f3640;
+  background: #101010;
   color: #f5f6fa;
   max-height: 0;
   width: 100%;
@@ -41,8 +37,13 @@ h2 {
   order: 1;
 }
 
+.selected-container {
+  display: flex;
+  width: 120px;
+}
+
 .selected {
-  background: #101010;
+  background: #000000;
   border-radius: 8px;
   margin-bottom: 8px;
   color: #f5f6fa;
@@ -55,15 +56,19 @@ h2 {
 
 .selected::after {
   content: "";
-  background: url("assets/arrow-down.sv");
+  background: url("assets/arrow-down.svg");
   background-size: contain;
   background-repeat: no-repeat;
 
+
   position: absolute;
   height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
+  width: 20px;
+  right: 5px;
+  top: 7px;
+
+  fill: rgb(255, 0, 0);
+  
 
   transition: all 0.4s;
 }
@@ -81,12 +86,13 @@ h2 {
 
 .select-box .options-container::-webkit-scrollbar {
   width: 8px;
-  background: #0d141f;
+  background: #101010;
   border-radius: 0 8px 8px 0;
+  display: none;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
+  background: #000000;
   border-radius: 0 8px 8px 0;
 }
 
@@ -94,17 +100,21 @@ h2 {
 .selected {
   padding: 5px 24px;
   cursor: pointer;
+  text-align: center;
 }
 
 .select-box .option:hover {
-  background: #414b57;
+  background: #1a1a1a;
 }
 
 .select-box label {
   cursor: pointer;
   font-size: 14px;
+  text-align: center;
+  padding-left: 0;
 }
 
 .select-box .option .radio {
   display: none;
+  text-align: center;
 }
