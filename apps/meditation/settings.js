@@ -1,5 +1,7 @@
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
+const html = document.documentElement;
+const settin = document.querySelector("#focus");
 
 const optionsList = document.querySelectorAll(".option");
 
@@ -7,9 +9,11 @@ selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
 });
 
-optionsList.forEach(o => {
+optionsList.forEach((o) => {
   o.addEventListener("click", () => {
     selected.innerHTML = o.querySelector("label").innerHTML;
     optionsContainer.classList.remove("active");
+
+    html.id = o.querySelector("label").innerHTML;
   });
 });

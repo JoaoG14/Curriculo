@@ -20,7 +20,7 @@ body {
   --box-shadow-slider: rgba(0, 0, 0, 1);
 }
 
-.light {
+#Light {
   --main-color: white;
   --second-color: black;
   --slider-background: rgb(245, 245, 245);
