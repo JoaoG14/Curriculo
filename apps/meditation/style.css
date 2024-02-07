@@ -13,7 +13,7 @@ body {
   padding: 0;
 }
 
-:root {
+#Dark {
   --main-color: black;
   --second-color: white;
   --slider-background: #111;

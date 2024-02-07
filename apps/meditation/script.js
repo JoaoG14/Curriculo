@@ -14,6 +14,8 @@ let resetHolderMin;
 let resetHolderSec;
 let started = false;
 
+
+
 btnSoundOn.addEventListener("click", () => {
   ambientSound.muted = true;
   btnSoundOn.classList.remove("show");
