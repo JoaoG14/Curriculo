@@ -6,15 +6,86 @@ const btnSoundOn = document.getElementById("btn-sound-on");
 const btnSoundOff = document.getElementById("btn-sound-off");
 const bell = document.getElementById("bell");
 const ambientSound = document.getElementById("ambient-sound");
-
+const oneMinute = document.getElementById("one-minute");
+const fiveMinutes = document.getElementById("five-minutes");
+const tenMinutes = document.getElementById("ten-minutes");
+const thirtyMinutes = document.getElementById("thirty-minutes");
+const oneHour = document.getElementById("one-hour");
 
 let paused = false;
 let holder;
 let resetHolderMin;
 let resetHolderSec;
 let started = false;
+let duration;
 
+function cleanTimeBtns() {
+  oneMinute.style.color = "var(--second-color)";
+  oneMinute.style.background = "var(--main-color)";
+  fiveMinutes.style.color = "var(--second-color)";
+  fiveMinutes.style.background = "var(--main-color)";
+  tenMinutes.style.color = "var(--second-color)";
+  tenMinutes.style.background = "var(--main-color)";
+  thirtyMinutes.style.color = "var(--second-color)";
+  thirtyMinutes.style.background = "var(--main-color)";
+  oneHour.style.color = "var(--second-color)";
+  oneHour.style.background = "var(--main-color)";
+};
 
+oneMinute.addEventListener("click", () => {
+  if (started) {
+  } else {
+    document.getElementById("timer").innerHTML = `1:00`;
+    minutes.value = 1;
+    cleanTimeBtns();
+    oneMinute.style.color = "var(--main-color)";
+    oneMinute.style.background = "var(--second-color)";
+  }
+});
+
+fiveMinutes.addEventListener("click", () => {
+  if (started) {
+  } else {
+    document.getElementById("timer").innerHTML = `5:00`;
+    minutes.value = 5;
+    cleanTimeBtns();
+    fiveMinutes.style.color = "var(--main-color)";
+    fiveMinutes.style.background = "var(--second-color)";
+  }
+});
+
+tenMinutes.addEventListener("click", () => {
+  if (started) {
+  } else {
+    document.getElementById("timer").innerHTML = `10:00`;
+    minutes.value = 10;
+    cleanTimeBtns();
+    tenMinutes.style.color = "var(--main-color)";
+    tenMinutes.style.background = "var(--second-color)";
+  }
+});
+
+thirtyMinutes.addEventListener("click", () => {
+  if (started) {
+  } else {
+    document.getElementById("timer").innerHTML = `30:00`;
+    minutes.value = 30;
+    cleanTimeBtns();
+    thirtyMinutes.style.color = "var(--main-color)";
+    thirtyMinutes.style.background = "var(--second-color)";
+  }
+});
+
+oneHour.addEventListener("click", () => {
+  if (started) {
+  } else {
+    document.getElementById("timer").innerHTML = `60:00`;
+    minutes.value = 60;
+    cleanTimeBtns();
+    oneHour.style.color = "var(--main-color)";
+    oneHour.style.background = "var(--second-color)";
+  }
+});
 
 btnSoundOn.addEventListener("click", () => {
   ambientSound.muted = true;
@@ -22,15 +93,15 @@ btnSoundOn.addEventListener("click", () => {
   btnSoundOn.classList.add("hide");
   btnSoundOff.classList.remove("hide");
   btnSoundOff.classList.add("show");
-})
+});
 
-btnSoundOff.addEventListener("click", ()=> {
+btnSoundOff.addEventListener("click", () => {
   ambientSound.muted = false;
   btnSoundOn.classList.remove("hide");
   btnSoundOn.classList.add("show");
   btnSoundOff.classList.remove("show");
   btnSoundOff.classList.add("hide");
-})
+});
 
 function rangeSlide(value) {
   if (started) {
@@ -40,13 +111,9 @@ function rangeSlide(value) {
 }
 
 btnStart.addEventListener("click", () => {
-  let duration;
-
   started = true;
 
   document.getElementById("minute").disabled = true;
-
-  console.log(minutes.value);
 
   if (paused) {
     duration = holder;
@@ -143,4 +210,3 @@ function rangeSlide(value) {
     document.getElementById("timer").innerHTML = `${value}:00`;
   }
 }
-

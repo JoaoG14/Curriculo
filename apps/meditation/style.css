@@ -19,7 +19,7 @@ body {
   --slider-background: #111;
   --box-shadow-slider: rgba(0, 0, 0, 1);
   --select-box-bg: #101010;
-  --select-box-bg-hover: #1A1A1A;
+  --select-box-bg-hover: #1a1a1a;
   --select-text: #f5f6fa;
   --arrow: url("assets/arrow-down-white.svg");
 }
@@ -78,6 +78,30 @@ button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+.time-btns {
+  justify-content: center;
+}
+
+.time-btns a {
+  display: none;
+  height: 10px;
+  width: 10px;
+  max-height: none;
+  background-color: transparent;
+  color: var(--second-color);
+  transition: all 0.3s ease;
+  margin: 10px;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#ten-minutes {
+  background-color: var(--second-color);
+  color: var(--main-color);
 }
 
 #focus {
@@ -188,4 +212,14 @@ a:active {
 #theme-container {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 950px) {
+  .time-btns a {
+    display: inline;
+  }
+
+  #sliderContainer {
+    display: none;
+  }
 }
