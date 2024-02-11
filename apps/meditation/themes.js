@@ -8,7 +8,7 @@ window.onload = checkTheme;
 const selected = document.querySelector(".selected");
 const themesContainer = document.querySelector(".options-container");
 const html = document.documentElement;
-const settin = document.querySelector("#focus");
+
 
 let themeSelected = localStorage.getItem("themeSelected");
 

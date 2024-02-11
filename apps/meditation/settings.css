@@ -53,7 +53,15 @@ body {
 }
 
 #theme-container {
-  margin-top: 0px;
+  margin-top: 50px;
+}
+
+#style-container {
+  margin-top: 10px;
+}
+
+#sound-container {
+  margin-top: 10px;
 }
 
 #themes {
@@ -175,4 +183,5 @@ body {
   color: rgb(219, 219, 219);
   bottom: 10px;
   z-index: 0;
+  margin-top: 35px;
 }
