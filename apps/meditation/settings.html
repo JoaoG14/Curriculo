@@ -44,6 +44,54 @@
           <div class="selected">Dark</div>
         </div>
       </div>
+
+      <div id="style-container">
+        <p id="themes">Style:</p>
+        <div class="select-box">
+          <div class="options-container">
+            <div class="option">
+              <input type="radio" class="radio" id="slider" name="category" />
+              <label for="slider">Slider</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" class="radio" id="buttons" name="category" />
+              <label for="buttons">Buttons</label>
+            </div>
+          </div>
+
+          <div class="selected">Slider</div>
+        </div>
+      </div>
+
+      <div id="sound-container">
+        <p id="themes">Sounds:</p>
+        <div class="select-box">
+          <div class="options-container">
+            <div class="option">
+              <input type="radio" class="radio" id="forest" name="category" />
+              <label for="forest">Forest</label>
+            </div>
+
+            <div class="option">
+              <input type="radio" class="radio" id="birds" name="category" />
+              <label for="birds">Birds</label>
+            </div>
+        
+          <div class="option">
+            <input type="radio" class="radio" id="rain" name="category" />
+            <label for="rain">Rain</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="river" name="category" />
+            <label for="river">River</label>
+          </div>
+        </div>
+
+          <div class="selected">Forest</div>
+        </div>
+      </div>
       
 
       <a href="index.html" id="back">close</a>
@@ -57,12 +105,9 @@
       src="assets/ambient-sounds/forest-with-small-river-birds-and-nature-field-recording-6735.mp3"
       id="ambient-sound"
     ></audio>
-    <audio src="assets/ambient-sounds/birds-19624.mp3"></audio>
-    <audio src="assets/ambient-sounds/birds-singing-calm-river-nature-ambient-sound-127411.mp3"></audio>
-    <audio src="assets/ambient-sounds/light-rain-ambient-114354.mp3"></audio>
-    <audio src="assets/ambient-sounds/rain-in-forest-birds-nature-111405.mp3"></audio>
-    <audio src="assets/ambient-sounds/relaxing-mountains-rivers-streams-running-water-18178.mp3"></audio>
-    <audio src="assets/ambient-sounds/soft-rain-ambient-111154.mp3"></audio>
+    <audio loop id="birds-sound" src="assets/ambient-sounds/birds-19624.mp3"></audio>
+    <audio loop id="rain-sound" src="assets/ambient-sounds/light-rain-ambient-114354.mp3"></audio>
+    <audio loop id="river-sound" src="assets/ambient-sounds/relaxing-mountains-rivers-streams-running-water-18178.mp3"></audio>
   </body>
 
   <script src="script.js"></script>

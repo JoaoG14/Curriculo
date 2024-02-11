@@ -99,8 +99,6 @@ button {
   border-radius: 5px;
 }
 
-
-
 #ten-minutes {
   background-color: var(--second-color);
   color: var(--main-color);
@@ -212,6 +210,16 @@ a:active {
 }
 
 #theme-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#style-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sound-container {
   display: flex;
   justify-content: space-between;
 }

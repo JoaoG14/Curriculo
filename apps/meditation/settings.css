@@ -53,12 +53,12 @@ body {
 }
 
 #theme-container {
-  height: 228px;
+  margin-top: 0px;
 }
 
 #themes {
   color: var(--second-color);
-  margin-top: 50px;
+  
 }
 
 .container {
@@ -97,10 +97,12 @@ body {
   color: var(--select-text);
   position: relative;
   text-align: center;
-  margin-top: 45px;
+  
 
   order: 0;
 }
+
+
 
 .selected::after {
   content: "";
@@ -121,6 +123,7 @@ body {
   max-height: 240px;
   opacity: 1;
   overflow-y: scroll;
+  
 }
 
 .select-box .options-container.active + .selected::after {
