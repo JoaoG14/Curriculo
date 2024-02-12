@@ -53,7 +53,7 @@ body {
 }
 
 #theme-container {
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 #style-container {
@@ -85,6 +85,12 @@ body {
   flex-direction: column;
 }
 
+.select-box-sounds {
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+}
+
 .select-box .options-container-themes {
   background: var(--select-box-bg);
   color: var(--select-text);
@@ -110,6 +116,8 @@ body {
 
   order: 1;
 }
+
+
 
 .select-box .options-container-styles {
   background: var(--select-box-bg);
@@ -378,8 +386,8 @@ body {
   text-align: center;
   margin-top: 0px;
   justify-content: center;
-  color: rgb(219, 219, 219);
+  color: var(--second-color);
   bottom: 10px;
   z-index: 0;
-  margin-top: 35px;
+  margin-top: 80px;
 }

@@ -155,7 +155,7 @@ button {
 }
 
 #sliderContainer {
-  display: block;
+  display: none;
 
   text-align: center;
 }
