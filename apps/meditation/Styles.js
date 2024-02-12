@@ -1,29 +1,38 @@
 function checkStyle() {
-  html.id = themeSelected;
-  selected.innerHTML = themeSelected;
+  styleToggle.id = styleSelected;
+  selectedStyle.innerHTML = themeSelected;
+
+  if (styleSelected === "slider") {
+    document.querySelector("#sliderContainer").style.display = "flex";
+    document.querySelector(".time-btns").style.display = "none";
+  }
+
+  if (styleSelected === "buttons") {
+    document.querySelector(".time-btns").style.display = "inline";
+    document.querySelector("#sliderContainer").style.display = "none";
+  }
 }
 
-window.onload = checkStyle;
 
-const selected = document.querySelector(".selected-style");
-const themesContainer = document.querySelector(".options-container");
-const html = document.documentElement;
 
-let themeSelected = localStorage.getItem("themeSelected");
+const selectedStyle = document.querySelector(".selected-style");
+const stylesContainer = document.querySelector(".options-container-styles");
+const styleToggle = document.querySelector(".style-toggler");
 
-const themesList = document.querySelectorAll(".option");
+let styleSelected = localStorage.getItem("styleSelected");
 
-selected.addEventListener("click", () => {
-  themesContainer.classList.toggle("active");
+const stylesList = document.querySelectorAll(".style-option");
+
+selectedStyle.addEventListener("click", () => {
+  stylesContainer.classList.toggle("active");
 });
 
-themesList.forEach((o) => {
+stylesList.forEach((o) => {
   o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    themesContainer.classList.remove("active");
-    themeSelected = o.querySelector("label").innerHTML;
-    html.id = o.querySelector("label").innerHTML;
-    console.log(themeSelected);
-    localStorage.setItem("themeSelected", o.querySelector("label").innerHTML);
+    selectedStyle.innerHTML = o.querySelector("label").innerHTML;
+    stylesContainer.classList.remove("active");
+    styleSelected = o.querySelector("label").innerHTML;
+    styleToggle.id = o.querySelector("label").innerHTML;
+    localStorage.setItem("styleSelected", o.querySelector("label").innerHTML);
   });
 });

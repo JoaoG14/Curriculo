@@ -85,7 +85,7 @@ button {
 }
 
 .time-btns a {
-  display: none;
+  display: inline;
   height: 10px;
   width: 10px;
   max-height: none;
@@ -224,6 +224,8 @@ a:active {
   justify-content: space-between;
 }
 
+/*media query para mudar o slider no mobile
+
 @media (max-width: 950px) {
   .time-btns a {
     display: inline;
@@ -232,4 +234,10 @@ a:active {
   #sliderContainer {
     display: none;
   }
+}
+
+*/
+
+.slider {
+  display: none;
 }
