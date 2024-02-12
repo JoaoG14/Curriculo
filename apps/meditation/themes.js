@@ -5,8 +5,8 @@ function checkTheme() {
 
 window.onload = checkTheme;
 
-const selected = document.querySelector(".selected");
-const themesContainer = document.querySelector(".options-container");
+const selected = document.querySelector(".selected-theme");
+const themesContainer = document.querySelector(".options-container-theme");
 const html = document.documentElement;
 
 let themeSelected = localStorage.getItem("themeSelected");

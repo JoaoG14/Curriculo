@@ -66,7 +66,6 @@ body {
 
 #themes {
   color: var(--second-color);
-  
 }
 
 .container {
@@ -80,7 +79,33 @@ body {
   flex-direction: column;
 }
 
-.select-box .options-container {
+.select-box .options-container-themes {
+  background: var(--select-box-bg);
+  color: var(--select-text);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.select-box .options-container-styles {
+  background: var(--select-box-bg);
+  color: var(--select-text);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.select-box .options-container-sounds {
   background: var(--select-box-bg);
   color: var(--select-text);
   max-height: 0;
@@ -98,21 +123,40 @@ body {
   width: 120px;
 }
 
-.selected {
+.selected-theme {
   background: var(--main-color);
   border-radius: 8px;
   margin-bottom: 8px;
   color: var(--select-text);
   position: relative;
   text-align: center;
-  
 
   order: 0;
 }
 
+.selected-style {
+  background: var(--main-color);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: var(--select-text);
+  position: relative;
+  text-align: center;
 
+  order: 0;
+}
 
-.selected::after {
+.selected-sound {
+  background: var(--main-color);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: var(--select-text);
+  position: relative;
+  text-align: center;
+
+  order: 0;
+}
+
+.selected-theme::after {
   content: "";
   background: var(--arrow);
   background-size: contain;
@@ -127,32 +171,107 @@ body {
   transition: all 0.4s;
 }
 
-.select-box .options-container.active {
+.selected-style::after {
+  content: "";
+  background: var(--arrow);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 5px;
+  top: 7px;
+
+  transition: all 0.4s;
+}
+
+.selected-sound::after {
+  content: "";
+  background: var(--arrow);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 5px;
+  top: 7px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container-themes.active {
   max-height: 240px;
   opacity: 1;
   overflow-y: scroll;
-  
 }
 
-.select-box .options-container.active + .selected::after {
+.select-box .options-container-themes.active + .selected-theme::after {
   transform: rotateX(180deg);
   top: -6px;
 }
 
-.select-box .options-container::-webkit-scrollbar {
+.select-box .options-container-themes::-webkit-scrollbar {
   width: 8px;
   background: var(--select-box-bg);
   border-radius: 0 8px 8px 0;
   display: none;
 }
 
-.select-box .options-container::-webkit-scrollbar-thumb {
+.select-box .options-container-themes::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container-styles.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container-styles.active + .selected-theme::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container-styles::-webkit-scrollbar {
+  width: 8px;
+  background: var(--select-box-bg);
+  border-radius: 0 8px 8px 0;
+  display: none;
+}
+
+.select-box .options-container-styles::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container-sounds.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container-sounds.active + .selected-theme::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container-sounds::-webkit-scrollbar {
+  width: 8px;
+  background: var(--select-box-bg);
+  border-radius: 0 8px 8px 0;
+  display: none;
+}
+
+.select-box .options-container-sounds::-webkit-scrollbar-thumb {
   background: var(--main-color);
   border-radius: 0 8px 8px 0;
 }
 
 .select-box .option,
-.selected {
+.selected-theme, .selected-sound, .selected-style {
   padding: 5px 24px;
   cursor: pointer;
   text-align: center;

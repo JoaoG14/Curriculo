@@ -1,11 +1,11 @@
-function checkTheme() {
+function checkStyle() {
   html.id = themeSelected;
   selected.innerHTML = themeSelected;
 }
 
-window.onload = checkTheme;
+window.onload = checkStyle;
 
-const selected = document.querySelector(".selected");
+const selected = document.querySelector(".selected-style");
 const themesContainer = document.querySelector(".options-container");
 const html = document.documentElement;
 
