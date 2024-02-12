@@ -11,6 +11,8 @@ const fiveMinutes = document.getElementById("five-minutes");
 const tenMinutes = document.getElementById("ten-minutes");
 const thirtyMinutes = document.getElementById("thirty-minutes");
 const oneHour = document.getElementById("one-hour");
+const customTimer = document.getElementById("custom-timer");
+const inputCustomTimer = document.getElementById("custom-timer-input");
 
 let paused = false;
 let holder;
@@ -30,7 +32,7 @@ function cleanTimeBtns() {
   thirtyMinutes.style.background = "var(--main-color)";
   oneHour.style.color = "var(--second-color)";
   oneHour.style.background = "var(--main-color)";
-};
+}
 
 oneMinute.addEventListener("click", () => {
   if (started) {
@@ -84,6 +86,18 @@ oneHour.addEventListener("click", () => {
     cleanTimeBtns();
     oneHour.style.color = "var(--main-color)";
     oneHour.style.background = "var(--second-color)";
+  }
+});
+
+customTimer.addEventListener("click", () => {
+  if (started) {
+  } else {
+    oneMinute.style.display = "none";
+    fiveMinutes.style.display = "none";
+    tenMinutes.style.display = "none";
+    thirtyMinutes.style.display = "none";
+    oneHour.style.display = "none";
+    inputCustomTimer.style.display = "inline";
   }
 });
 

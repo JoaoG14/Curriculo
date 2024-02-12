@@ -241,3 +241,7 @@ a:active {
 .slider {
   display: none;
 }
+
+#custom-timer-input {
+  display: none;
+}
