@@ -249,8 +249,8 @@ a:active {
   
   text-align: center;
   text-decoration: none;
-  background-color: #111;
-  color: white;
+  background-color: var(--slider-background);
+  color: var(--second-color);
   border: none;
   border-radius: 50px;
   font-family: 'Poppins', sans-serif;
