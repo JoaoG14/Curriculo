@@ -13,6 +13,9 @@ const thirtyMinutes = document.getElementById("thirty-minutes");
 const oneHour = document.getElementById("one-hour");
 const customTimer = document.getElementById("custom-timer");
 const inputCustomTimer = document.getElementById("custom-timer-input");
+const confirmTimer = document.getElementById("confirm-timer");
+const addTime = document.getElementById("plus");
+const decreaseTime = document.getElementById("minus");
 
 let paused = false;
 let holder;
@@ -92,12 +95,47 @@ oneHour.addEventListener("click", () => {
 customTimer.addEventListener("click", () => {
   if (started) {
   } else {
+    inputCustomTimer.value = parseInt(minutes.value);
     oneMinute.style.display = "none";
     fiveMinutes.style.display = "none";
     tenMinutes.style.display = "none";
     thirtyMinutes.style.display = "none";
     oneHour.style.display = "none";
+    customTimer.style.display = "none";
+    confirmTimer.style.display = "inline";
     inputCustomTimer.style.display = "inline";
+    addTime.style.display = "inline";
+    decreaseTime.style.display = "inline";
+  }
+});
+
+addTime.addEventListener("click", () => {
+  inputCustomTimer.value = parseInt(inputCustomTimer.value) + 1
+  document.getElementById("timer").innerHTML = `${inputCustomTimer.value}:00`;
+})
+
+decreaseTime.addEventListener("click", () => {
+  inputCustomTimer.value = parseInt(inputCustomTimer.value) - 1
+  document.getElementById("timer").innerHTML = `${inputCustomTimer.value}:00`;
+})
+
+confirmTimer.addEventListener("click", () => {
+  if (started) {
+  } else {
+    oneMinute.style.display = "inline";
+    fiveMinutes.style.display = "inline";
+    tenMinutes.style.display = "inline";
+    thirtyMinutes.style.display = "inline";
+    oneHour.style.display = "inline";
+    customTimer.style.display = "inline";
+    confirmTimer.style.display = "none";
+    inputCustomTimer.style.display = "none";
+    addTime.style.display = "none";
+    decreaseTime.style.display = "none";
+    console.log(inputCustomTimer.value);
+    minutes.value = parseInt(inputCustomTimer.value);
+    document.getElementById("timer").innerHTML = `${inputCustomTimer.value}:00`;
+    cleanTimeBtns();
   }
 });
 
