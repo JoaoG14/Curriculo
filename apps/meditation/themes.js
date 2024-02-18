@@ -9,6 +9,9 @@ window.onload = checkSettings;
 const selected = document.querySelector(".selected-theme");
 const themesContainer = document.querySelector(".options-container-themes");
 const html = document.documentElement;
+const timeBtns = document.querySelector(".time-btns");
+const slider = document.querySelector(".slider-container");
+const customBtns = document.querySelector(".custom-btns")
 
 let themeSelected = localStorage.getItem("themeSelected");
 
@@ -49,3 +52,17 @@ stylesList.forEach((o) => {
     console.log(styleSelected);
   });
 });
+
+function checkStyle() {
+  if (selectedStyle === "slider") {
+    slider.style.display = "block";
+    timeBtns.style.display = "none";
+    customBtns.style.display = "none";
+  }
+  if (selectedStyle === "slider") {
+    slider.style.display = "none";
+    timeBtns.style.display = "none";
+    customBtns.style.display = "none";
+  }
+  
+}

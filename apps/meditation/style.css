@@ -155,9 +155,8 @@ button {
   margin-top: 20px;
 }
 
-#sliderContainer {
-  display: none;
-
+.sliderContainer {
+ 
   text-align: center;
 }
 #rangeValue {
@@ -280,4 +279,12 @@ input::-webkit-inner-spin-button {
 #plus {
   display: none;
   margin-right: 40px;
+}
+
+.slider-container {
+  display: none;
+}
+
+.custom-btns {
+  display: none;
 }
