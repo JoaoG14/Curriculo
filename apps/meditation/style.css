@@ -156,7 +156,6 @@ button {
 }
 
 .sliderContainer {
- 
   text-align: center;
 }
 #rangeValue {
@@ -249,14 +248,14 @@ a:active {
 #custom-timer-input {
   display: none;
   width: 50px;
-  
+
   text-align: center;
   text-decoration: none;
   background-color: var(--slider-background);
   color: var(--second-color);
   border: none;
   border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
